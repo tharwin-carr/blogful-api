@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
+    "migrate": "postgrator --config postgrator-config.js",    
     "start": "node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master"
@@ -14,13 +15,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "-": "0.0.1",
     "chai": "^4.2.0",
     "cors": "^2.8.5",
+    "d": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.1.1",
     "mocha": "^8.1.3",
+    "mochai": "^0.2.5",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "pg": "^8.4.0",
     "supertest": "^5.0.0"
+  },
+  "devDependencies": {
+    "postgrator-cli": "^3.2.0"
   }
 }
